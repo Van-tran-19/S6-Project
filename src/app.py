@@ -8,7 +8,7 @@ registry. All screen navigation goes through `app.go_to(key)`.
 from __future__ import annotations
 import pygame
 from constants import WIDTH, HEIGHT, FPS
-from data.database import Database
+from data.database import DatabaseManager
 from screens.splash_screen import SplashScreen
 from screens.home_screen import HomeScreen
 from screens.game_screen import GameScreen
@@ -24,7 +24,7 @@ class App:
         self.height = HEIGHT
 
         # Shared data layer — injected into every screen
-        self.db: Database = Database()
+        self.db: DatabaseManager = DatabaseManager()
 
         # Shared state between screens
         self.selected_theme: str = self.db.get_themes()[0]
