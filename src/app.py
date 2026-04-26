@@ -7,7 +7,7 @@ registry. All screen navigation goes through `app.go_to(key)`.
 
 from __future__ import annotations
 import pygame
-from constants import WIDTH, HEIGHT, FPS
+from src.constants import WIDTH, HEIGHT, FPS
 from data.database import DatabaseManager
 from screens.splash_screen import SplashScreen
 from screens.home_screen import HomeScreen
