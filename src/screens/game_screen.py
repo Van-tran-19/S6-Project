@@ -1,6 +1,10 @@
 import pygame
 from src.constants import C_BG, C_WHITE, PLAY_DURATION
 from src.engine.stt_live import live_transcribe_optimized
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+MODEL_PATH = os.path.join(BASE_DIR, "vosk-model-small-fr-0.22")
 
 class GameScreen:
     def __init__(self, app):
@@ -23,7 +27,7 @@ class GameScreen:
     def check_answer(self):
         # On lance la reconnaissance vocale
         # Remarque : MODEL_PATH doit être défini ou importé
-        guess = live_transcribe_optimized("vosk-model-small-fr-0.22")
+        guess = live_transcribe_optimized(MODEL_PATH)
         print(f"Vous avez dit : {guess}")
         
         # Logique de validation simplifiée

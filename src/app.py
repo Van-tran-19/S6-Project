@@ -9,9 +9,9 @@ from __future__ import annotations
 import pygame
 from src.constants import WIDTH, HEIGHT, FPS
 from data.database import DatabaseManager
-from screens.splash_screen import SplashScreen
-from screens.home_screen import HomeScreen
-from screens.game_screen import GameScreen
+from src.screens.splash_screen import SplashScreen
+from src.screens.home_screen import HomeScreen
+from src.screens.game_screen import GameScreen
 
 
 class App:
